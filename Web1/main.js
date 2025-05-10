@@ -1215,11 +1215,11 @@ function searchProductPriceUser() {
 function createSlideShowArray() {
       if(localStorage.getItem('slideshow') == null) {
             let slideShowArray = [
-                  {slideShowID : 0, img : "https://assets.flowerstore.ph/public/tenantVN/app/assets/images/banner/UZjHB4GICYEIQIyhKajpuhHIieB6Wg9HyFg4nFy9.gif"},
-                  {slideShowID : 1, img : "https://assets.flowerstore.ph/public/tenantVN/app/assets/images/banner/mKNNluCvJOMKjIDUzdJBDq0LKuI939qK9zJC6atr.gif"},
-                  {slideShowID : 2, img : "https://assets.flowerstore.ph/public/tenantVN/app/assets/images/banner/9BJItFvQLCmOZaR3tYCj2hcuBpuMhlwgZ2a65R9N.gif"},
-                  {slideShowID : 3, img : "https://assets.flowerstore.ph/public/tenantVN/app/assets/images/banner/ol989p3XImck4WQpKLC8YBbl11jaZ0x5OOz8U067.gif"},
-                  {slideShowID : 4, img : "https://assets.flowerstore.ph/public/tenantVN/app/assets/images/banner/2PJHQer21QRAADNGJwonlV41gmCUUxTzIFKOv5ZV.gif"},
+                  {slideShowID : 0, img : "1.png"},
+                  {slideShowID : 1, img : "2.png"},
+                  {slideShowID : 2, img : "3.png"},
+                  {slideShowID : 3, img : "4.png"},
+                  {slideShowID : 4, img : "5.png"},
             ];
             localStorage.setItem('slideshow',JSON.stringify(slideShowArray));
       } 
@@ -1236,7 +1236,7 @@ function moveSlideShow(slideShowImg_id) {
       } else if(index < 0) {
             index = numSlides - 1;
       }
-      slideShow.innerHTML = '<img src="'+slideShowArray[index].img+'" alt="">';
+      slideShow.innerHTML = '<img src="IMAGE/'+slideShowArray[index].img+'" alt="">';
       countDown = setTimeout(function() {
             moveSlideShowAfter(slideShowImg_id);
       },2000)
